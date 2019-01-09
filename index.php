@@ -66,10 +66,10 @@
 				        <td><?php echo $row['email']?></td>
 				        <td><?php echo $row['address']?></td>
 				        <td>
-							<a href="edit_contact.php?edit=<?php echo $row['contact_id']; ?>">Edit</a>
+							<button type="button" class="btn btn-outline-info btn-sm fa fa-pencil"><a href="edit_contact.php?edit=<?php echo $row['contact_id']; ?>">Edit</a></button>
 						</td>
 						<td>
-							<a href="server.php?del=<?php echo $row['contact_id']; ?>">Delete</a>
+							<button type="button" class="btn btn-outline-danger btn-sm fa fa-trash"><a href="server.php?del=<?php echo $row['contact_id']; ?>">Delete</a></button>
 						</td>
 				    </tr>
   				  </tbody>
