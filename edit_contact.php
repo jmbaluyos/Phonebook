@@ -50,12 +50,12 @@
 				<input type="hidden" name="contact_id" value="<?php echo $contact_id; ?>">
 				<div class="input-group col-md-12">
 					<label class="col-md-3">Name: </label>
-					<input class="col-md-8" type="text" name="name" value="<?php echo $name; ?>">
+					<input class="col-md-8" type="text" name="name" value="<?php echo $name; ?>" required>
 				</div>
 				<br />
 				<div class="input-group col-md-12">
 					<label class="col-md-3">Phone No: </label>
-					<input class="col-md-8" type="text" name="phone" value="<?php echo $phone; ?>">
+					<input class="col-md-8" type="text" name="phone" value="<?php echo $phone; ?>" required>
 				</div>
 				<br />
 				<div class="input-group col-md-12">

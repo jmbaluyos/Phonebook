@@ -28,6 +28,7 @@
 				<button type="button" class="btn btn-outline-info btn-sm"><a class = "nav-link" href = "addnew.php?username=<?php echo $_GET['username']; ?>" name="add_button"><i class="fa fa-plus"> Create new contact</i></a></button>
 		      </li>
 		    </ul>
+		    	</center><p style="color:white; font-size: 30px; margin-right: 400px;">Hi <strong><?php isset($_SESSION['username']); echo $_SESSION['username']; ?>!</strong></p>
 		    	<div class="btn-group">
 							<button type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 						<div class="dropdown-menu">
@@ -48,7 +49,7 @@
 					$results = mysqli_query($db, "SELECT * FROM users, account WHERE users.username = '$username' AND account.username = '$username'"); 
 			?>
 				
-				<table class = "table table-info">
+				<table class = "table table-light">
 				<thead>
 					<tr class="success">
 						<th>Name</th>
@@ -66,14 +67,14 @@
 				        <td><?php echo $row['email']?></td>
 				        <td><?php echo $row['address']?></td>
 				        <td>
-							<button type="button" class="btn btn-outline-info btn-sm fa fa-pencil"><a href="edit_contact.php?edit=<?php echo $row['contact_id']; ?>">Edit</a></button>
-						</td>
-						<td>
+							<button type="button" class="btn btn-outline-info btn-sm fa fa-pencil"><a href="edit_contact.php?edit=<?php echo $row['contact_id']; ?>">Edit</a></button> |
+					
 							<button type="button" class="btn btn-outline-danger btn-sm fa fa-trash"><a href="server.php?del=<?php echo $row['contact_id']; ?>">Delete</a></button>
 						</td>
 				    </tr>
   				  </tbody>
-  				  <?php } } ?>
+  				  <?php } 
+  				  } ?>
   				  </table>
 			</div>
 		</div>
